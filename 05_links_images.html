@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links & Images</title>
+</head>
+<body>
+    <!-- External Link -->
+    <p>
+     <a href="https://google.com">Click here for Google's search engine</a>
+    </p>
+
+    <!-- External Link that opens in a new tab -->
+    <p>
+        <a href="https://google.com" target="_blank">Click here for Google's search engine</a> 
+    </p>
+
+    <!-- Internal Link -->
+    <p>
+        <a href="/04_topography.html">Click here to see a basic layout</a>
+    </p>
+
+    <!-- Internal Image -->
+    <p>
+        <img src="/images/sample.jpg" width="300" height="300" alt="This is a sample image">
+    </p>
+
+    <!-- External Image -->
+    <p>
+        <img id="image" alt="Unsplash Image">
+    </p>
+
+    <script>
+    // Fetch image from Unsplash
+    fetch('https://api.unsplash.com/photos/random?client_id=P0ypGf5r2jvS3MLCmSRbu3eby3rh3BIJRkubPk4nQwY')
+      .then(response => response.json())
+      .then(data => {
+        const image = document.getElementById('image');
+        image.src = data.urls.regular;
+      })
+      .catch(error => console.error(error));
+    </script>
+      
+</body>
+</html>
