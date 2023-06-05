@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pixabay Image Fetcher</title>
+</head>
+<body>
+    <h1>A picture of a Bird</h1>
+    <br>
+  <img id="image" src="" alt="Pixabay Image">
+
+  <script>
+    // Fetch image from Pixabay
+    fetch('https://pixabay.com/api/?key=37058191-a96ebce099f9a11f2d8fc2cde&q=yellow+flowers&image_type=photo') //important
+      .then(response => response.json())
+      .then(data => {
+        const image = document.getElementById('image');
+        image.src = data.hits[0].webformatURL; //Important
+      })
+      .catch(error => {
+        console.error(error);
+        const image = document.getElementById('image');
+        image.src = 'fallback-image.jpg'; // Replace with the path to your fallback image
+      });
+  </script>
+</body>
+</html>

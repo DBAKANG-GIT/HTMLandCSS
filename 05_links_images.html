@@ -24,7 +24,7 @@
 
     <!-- Internal Image -->
     <p>
-        <img src="/images/sample.jpg" width="300" height="300" alt="This is a sample image">
+      <!--  <img src="/images/sample.jpg" width="300" height="300" alt="This is a sample image">-->
     </p>
 
     <!-- External Image -->
@@ -34,14 +34,41 @@
 
     <script>
     // Fetch image from Unsplash
-    fetch('https://api.unsplash.com/photos/random?client_id=P0ypGf5r2jvS3MLCmSRbu3eby3rh3BIJRkubPk4nQwY')
-      .then(response => response.json())
+  //fetch('https://api.unsplash.com/photos/random?client_id=EMDUwVs660M8Adu435ck1paYEXwueQz3MYkQ9pqqaFc')-->
+    fetch('https://pixabay.com/api/?key=37058191-a96ebce099f9a11f2d8fc2cde&q=yellow+flowers&image_type=photo')
+    .then(response => response.json())
       .then(data => {
         const image = document.getElementById('image');
         image.src = data.urls.regular;
       })
       .catch(error => console.error(error));
     </script>
+
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Pixabay Image Fetcher</title>
+</head>
+<body>
+  <img id="image" src="" alt="Pixabay Image">
+
+  <script>
+    // Fetch image from Pixabay
+    fetch('https://pixabay.com/api/?key=37058191-a96ebce099f9a11f2d8fc2cde&q=yellow+flowers&image_type=photo')
+      .then(response => response.json())
+      .then(data => {
+        const image = document.getElementById('image');
+        image.src = data.hits[0].webformatURL;
+      })
+      .catch(error => {
+        console.error(error);
+        const image = document.getElementById('image');
+        image.src = 'fallback-image.jpg'; // Replace with the path to your fallback image
+      });
+  </script>
+</body>
+</html>
+
       
 </body>
 </html>
