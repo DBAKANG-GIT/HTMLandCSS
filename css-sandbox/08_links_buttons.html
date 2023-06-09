@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links and Buttons</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        a{
+            color: #333;
+            text-decoration: none;
+            
+        }
+        /* Only when user hovers over the element */
+        a:hover{
+            color: coral;
+            text-decoration: underline;
+
+        }
+        /* When you click on it, it changes colors */
+        /* a:visited{
+            color: red;
+        } */
+
+        a:active{
+            color: red;
+        }
+        /* Button Styling */
+        .btn{
+            background: #4c6ca0; /* Facebook Blue */
+            border: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            color: #f4f4f4;
+            background: #446190;
+        }
+
+    </style>
+</head>
+<body>
+    <br>
+    <a class="btn" href="#">My Link</a>
+    <br>
+    <br>
+    <button class="btn">My Button</button>
+</body>
+</html>

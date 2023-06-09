@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Align</title>
+    <style>
+        *{
+            /* When you have padding it adds to width of container */
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4em;
+
+        }
+        .container{
+            max-width: 960px; /* A little Narrow */ 
+            margin: 30px auto; /* Top/Down Left&Right */
+        }
+
+        .box{
+            background: #f4f4f4;
+            border: 1px solid #333;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .box p{
+            /* text Align */
+            text-align: justify;
+        }
+
+        #box-2{
+            float: left;
+            background-color: pink;
+            width: 45%; /* This would be 50% of top element*/
+             
+
+        }
+
+        #box-3{
+            float: right;
+            background-color: beige;
+            width: 50%; /* This would be 50% of top element*/
+        }
+        /* Utility class for clearing floats */
+        .clr{
+            clear: both;
+        }
+
+
+        
+
+
+         
+    </style>
+</head>
+<body>
+    <!-- Creating Container to be able to center div's -->
+    <div class="container">
+        <!-- Class but with seperate id's so we can target them seperately -->
+        <div id="box-1" class="box">
+            <h3>Box 1</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Blanditiis, repellendus. 
+                Illo quae, nihil temporibus soluta possimus 
+                ullam est tempora doloremque?</p>
+        </div> 
+        <!-- Floating Box 2 and 3 -->
+        <div id="box-2" class="box">
+            <h3>Box 2</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Blanditiis, repellendus. 
+                Illo quae, nihil temporibus soluta possimus 
+                ullam est tempora doloremque?</p>
+        </div>
+
+        <div id="box-3" class="box">
+            <h3>Box 3</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Blanditiis, repellendus. 
+                Illo quae, nihil temporibus soluta possimus 
+                ullam est tempora doloremque?</p>
+        </div>
+        <div class="clr"></div>
+        <div id="box-4" class="box">
+            <h3>Box 4</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Blanditiis, repellendus. 
+                Illo quae, nihil temporibus soluta possimus 
+                ullam est tempora doloremque?</p>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
