@@ -10,12 +10,17 @@
       rel="stylesheet"
     />
     <style>
-      *{
+      *{               
         
         /* 
         -May want to add "border-box for "box-sizing so padding does not affect width
         -Reset margin and padding 
        */
+
+        /* CSS RESET */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
       body {
@@ -45,6 +50,8 @@
 
       .form-wrap {
         position: absolute;
+        height: 500px;
+        width: 350px;
         top: 30px;
         left: 200px;
         background-color: whitesmoke;
@@ -56,6 +63,9 @@
 
       .form-wrap h1,
       .form-wrap p {
+        text-align: center;
+        line-height: 1.5em;
+
         /* 
           May want to center these
         */
@@ -99,6 +109,7 @@
       }
 
       footer {
+        
         /* 
         Should be centered
        */
