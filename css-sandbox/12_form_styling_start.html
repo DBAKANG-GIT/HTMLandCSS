@@ -35,11 +35,13 @@
         /* 
         Underlined links are ugly :)
        */
+       text-decoration: none;
       }
 
       #container {
         margin-left: auto;
         margin-right: auto;
+        max-width: 1200px;
 
 
         /* 
@@ -51,12 +53,12 @@
 
       .form-wrap {
         position: absolute;
-        height: 500px;
+        height: 550px;
         width: 350px;
         top: 30px;
         left: 200px;
         background-color: whitesmoke;
-        padding: 25px 10px 15px 20px;
+        padding: 25px 20px 25px 20px;
       
         /* 
           This is the white area around the form and heading, etc
@@ -130,6 +132,7 @@
         /* 
         Should be centered
        */
+
       }
 
       footer a {
@@ -148,7 +151,7 @@
           <div class="form-group">
             <label for="first-name">First Name</label>
             <input type="text" name="firstName" id="first-name" />
-          </div>
+          </div>  
           <div class="form-group">
             <label for="last-name">Last Name</label>
             <input type="text" name="lastName" id="last-name" />
@@ -157,7 +160,7 @@
             <label for="email">Email</label>
             <input type="email" name="email" id="email" />
           </div>
-          <div class="form-group">
+          <div class="form-group"> 
             <label for="password">Password</label>
             <input type="password" name="password" id="password" />
           </div>
