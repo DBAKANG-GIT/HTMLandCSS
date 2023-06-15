@@ -30,7 +30,7 @@
         */
         font-family: 'Raleway', sans-serif;
       }
-
+ 
       a {
         /* 
         Underlined links are ugly :)
@@ -39,11 +39,14 @@
       }
 
       #container {
+        display: flex;
+        
         margin-left: auto;
         margin-right: auto;
         max-width: 1200px;
-
-
+        position: relative;
+        flex-direction: column;
+        align-items: center;
         /* 
         -Remember, margin: auto on left and right will center a block element 
         -I would also set a "max-width" for responsiveness
@@ -52,13 +55,15 @@
       }
 
       .form-wrap {
-        position: absolute;
-        height: 550px;
+        /* position: absolute; */
+        height: 500px;
         width: 350px;
         top: 30px;
         left: 200px;
         background-color: whitesmoke;
         padding: 25px 20px 25px 20px;
+        align-items: center;
+        margin-top: 40px;
       
         /* 
           This is the white area around the form and heading, etc
@@ -87,6 +92,7 @@
           Label should be turned into a block element
         */
         display: block; /*  block */
+        margin-bottom: 2.5px;
 
       }
 
@@ -118,24 +124,34 @@
         /* 
           Hover background color for button is #37a08e
         */
-        color: #37a08e;
+        background-color: #37a08e;
       }
 
       .form-wrap .bottom-text {
         /* 
           Bottom text is smaller
         */
+        font-size: 12px;
       }
 
       footer {
-        
+        /* position: absolute; make footer positioned absolute */
+        width: 100%; /* make footer stretch the width of container div */
         /* 
         Should be centered
        */
+       text-align: center;
+       bottom:0;
+       border-radius: 5px;
+      }
 
+      footer p{
+        color: white ;
+        margin-top: 5px;
       }
 
       footer a {
+        color: #49c1a2
         /* 
           Footer link color is #49c1a2
         */
@@ -170,7 +186,7 @@
           </div>
           <button type="submit" class="btn">Sign Up</button>
           <p class="bottom-text">
-            By clicking the Sign Up button, you agree to our
+            By clicking the Sign Up button, you agree to our <br>
             <a href="#">Terms & Conditions</a> and
             <a href="#">Privacy Policy</a>
           </p>
