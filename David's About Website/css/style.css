@@ -32,6 +32,49 @@ p{
     padding: 0 20px;
 }
 
+.text-primary{ /* Adding it here so it can be reused */
+    color: #f7c08a; /*Cream Orange */
+}
+
+.lead-text{
+    font-size: 20px;
+}
+
+/* Button */
+.lead-button{
+    display: inline-block;
+    background-color:#333;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.lead-button:hover{
+    background-color: #f7c08a;
+    color: #333;
+    
+}
+
+.button-light{
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Paragraph Background */
+.bg-dark{
+    background-color: #333;
+    color: #f4f4f4;
+}
+.bg-light{
+    background-color: #f4f4f4;
+    color: #333;
+}
+.bg-primary{
+    background-color: #f7c08a;
+    color: #f4f4f4;
+}
+
 /* Navbar */
 #navbar{ /* # is for id*/ 
     background: #333;
@@ -64,6 +107,57 @@ p{
     color: #f7c08a; /*Cream Orange */
     background:  #444;
 }
+
+/* Showcase */
+#showcase{
+    background: url(../img/showcase.jpg) no-repeat center center/cover;
+    height: 700px;
+} 
+#showcase .container .showcase-content{
+    color: #fff;
+    text-align: center;
+    padding-top: 170px;
+}
+
+#showcase .showcase-content h1{
+    font-size: 60px;
+    line-height: 1.2em;
+}
+/*Adding Padding to push button downstairs */
+#showcase .showcase-content p{
+    padding-bottom: 20px;
+    line-height: 1.7em;
+}
+
+/* Home Info */
+#home-info{
+    height: 400px;
+}
+
+#home-info .info-img{
+    float: left;
+    width: 50%;
+    background: URL(../img/photo-1.jpg);
+    min-height: 100%;
+}
+
+#home-info .info-content{
+    float: right;
+    width: 50%;
+    padding: 50px 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#home-info .info-content p{
+    padding-bottom: 30px;
+
+}
+    
+
+
+
+
 
 
 
