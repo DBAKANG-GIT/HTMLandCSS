@@ -1,19 +1,21 @@
 /* Reset */
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* Main Styling */
-html, body{
+html,
+body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.7em;
 }
 
 a{
     color: #fff;
-    text-decoration: none; /* All links have no underline */
+    text-decoration: none;
+    /* All links have no underline */
 }
 
 h1, h2, h3{
@@ -21,19 +23,24 @@ h1, h2, h3{
 }
 
 p{
-    margin: 10px 0; /*Top/Bottom Left&Right */
+    margin: 10px 0;
+    /*Top/Bottom Left&Right */
 }
 
 /* Utility Class */
 .container{
-    margin: auto; /* Push to middle */
-    max-width: 1600px;
+    margin: auto;
+    /* Push to middle */
+    max-width: 1100px;
     overflow: auto;
     padding: 0 20px;
+    /* background-color: #333; */
 }
 
-.text-primary{ /* Adding it here so it can be reused */
-    color: #f7c08a; /*Cream Orange */
+.text-primary{
+    /* Adding it here so it can be reused */
+    color: #f7c08a;
+    /*Cream Orange */
 }
 
 .lead-text{
@@ -43,7 +50,7 @@ p{
 /* Button */
 .lead-button{
     display: inline-block;
-    background-color:#333;
+    background-color: #333;
     padding: 13px 20px;
     border: none;
     cursor: pointer;
@@ -53,7 +60,7 @@ p{
 .lead-button:hover{
     background-color: #f7c08a;
     color: #333;
-    
+
 }
 
 .button-light{
@@ -61,91 +68,118 @@ p{
     color: #333;
 }
 
+
+
 /* Paragraph Background */
 .bg-dark{
     background-color: #333;
     color: #f4f4f4;
 }
+
 .bg-light{
     background-color: #f4f4f4;
     color: #333;
 }
+
 .bg-primary{
     background-color: #f7c08a;
     color: #333;
 }
 
 .clr{
-clear: both;
+    clear: both;
 }
+
+.circle-image-effect{
+    border-radius: 50%;
+}
+
+/* Padding Additions */
+
+.py-1 {
+    padding: 10px 0
+};
+
+.py-2 {
+    padding: 20px 0
+};
+
+.py-3 {
+    padding: 30px 0
+};
 
 /* Navbar */
-#navbar{ /* # is for id*/ 
-    background: #333;
-    overflow: auto; /*Add Scroll bar when necessary*/
+#navbar{
+    /* # is for id*/
+    overflow: auto;
+    background-color: #444 !important;
+    color: #fff;
+    /*Add Scroll bar when necessary*/
 }
 
-#navbar h1{
-    float : left;
+#navbar h1 {
+    float: left;
     padding-top: 20px;
 }
 
-#navbar ul{
+#navbar ul {
     float: right;
     list-style: none;
 }
 
-#navbar ul li{
-    float:left;
+#navbar ul li {
+    float: left;
 }
 
-#navbar ul li a{
-    display:block;
+#navbar ul li a {
+    display: block;
     padding: 20px;
-    text-align: center; 
+    text-align: center;
 }
 
 #navbar ul li a:hover,
 #navbar ul li a.current /* Add the same styling to current page */
-{
+    {
     color: #f7c08a; /*Cream Orange */
     background:  #444;
 }
 
 /* Showcase */
-#showcase{
+#showcase {
     background: url(../img/showcase.jpg) no-repeat center center/cover;
     height: 700px;
-} 
-#showcase .container .showcase-content{
+}
+
+#showcase .container .showcase-content {
     color: #fff;
     text-align: center;
     padding-top: 170px;
 }
 
-#showcase .showcase-content h1{
+#showcase .showcase-content h1 {
     font-size: 60px;
     line-height: 1.2em;
 }
+
 /*Adding Padding to push button downstairs */
-#showcase .showcase-content p{
+#showcase .showcase-content p {
     padding-bottom: 20px;
     line-height: 1.7em;
 }
 
 /* Home Info */
-#home-info{
+#home-info {
     height: 400px;
 }
 
-#home-info .info-img{
+#home-info .info-img {
     float: left;
     width: 50%;
     background: URL(../img/photo-1.jpg);
     min-height: 100%;
 }
 
-#home-info .info-content{
+#home-info .info-content {
     float: right;
     width: 50%;
     padding: 50px 30px;
@@ -153,18 +187,49 @@ clear: both;
     overflow: hidden;
 }
 
-#home-info .info-content p{
+#home-info .info-content p {
     padding-bottom: 30px;
 
 }
 
 /* Features */
-#features .box{
+#features .box {
     float: left;
     padding: 50px;
     text-align: center;
     width: 33.3%;
 }
+
+
+
+/* About Page */
+
+
+/* About Section */
+
+/* Info left */
+#about-info .container .info-left {
+    float: left;
+    width: 50%;
+    min-height: 100%;
+}
+
+
+
+/* info Right */
+#about-info .container .info-right {
+    float: right;
+    width: 50%;
+    min-height: 100%;
+}
+
+#about-info .container .info-right img {
+    width: 70%;
+    display: block;
+    /*Images by default are inline */
+    margin: auto;
+}
+
 
 /* Footer */
 #footer {
@@ -172,46 +237,10 @@ clear: both;
     padding: 20px;
     text-align: center;
     color: #fff;
-  }
+}
 
-  #footer p{
+#footer p {
     margin: 10px 0;
     display: box;
     font-size: 20px;
-
-  }
-
-
-    
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
- 
-
+}
