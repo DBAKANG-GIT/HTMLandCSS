@@ -112,8 +112,7 @@ p{
 #navbar{
     /* # is for id*/
     overflow: auto;
-    background-color: #444 !important;
-    color: #fff;
+    background-color: #333;
     /*Add Scroll bar when necessary*/
 }
 
