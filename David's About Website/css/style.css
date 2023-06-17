@@ -55,6 +55,15 @@ p{
     border: none;
     cursor: pointer;
     font-size: 18px;
+    color:#ddd;
+}
+
+/* Box */
+.box {
+    float: left;
+    padding: 50px;
+    text-align: center;
+    width: 33.3%;
 }
 
 .lead-button:hover{
@@ -197,13 +206,13 @@ p{
 
 }
 
-/* Features */
+/* Features
 #features .box {
     float: left;
     padding: 50px;
     text-align: center;
     width: 33.3%;
-}
+} */
 
 /* About Page */
 #about-info .container{
@@ -264,6 +273,48 @@ p{
     float: left;
     margin-right: 20px;
 }
+
+/* Contact Section */
+#contact-section .container .form-group{
+    margin-bottom: 20px;
+}
+
+#contact-section .container .form-group label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact-section .container .form-group input,
+#contact-section .container .form-group textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px #ddd solid;
+}
+
+#contact-section .container .form-group textarea{
+    height: 200px;
+}
+
+#contact-section .container .form-group input:focus,
+#contact-section .container .form-group textarea:focus{
+    outline: none;
+    border-color: #f7c08a;
+
+}
+
+
+
+
+
+
+/*
+
+<section id="contact-section" class="py-3">
+        <div class="container">
+            <h1 class="l-heading"><span class="text-primary">Contact </span>Us</h1>
+            <p>Please fill out the form below to contact us</p>
+            <form action="process.php">
+                <div class="form-group">*/
 
 
 /* Footer */
