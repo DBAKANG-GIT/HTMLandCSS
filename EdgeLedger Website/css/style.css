@@ -76,6 +76,58 @@ a{
   font-weight: 400;
  }
 
+ /* Header/ Landing Page Image */
+
+ .hero{
+  background-image: url(../image_resources/home/showcase.jpg);
+  background-repeat: no-repeat; /* the background image will not be repeated. */
+  background-position: center center; /* "/cover" means that the background image will be resized to cover the entire area of the element, without stretching or distorting the image. */
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+  }
+
+  .hero .content{
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Of container hero*/
+    align-items: center; /* Align vertically */
+    justify-content: center; /* Align Horizontally */
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero .content h1{
+    font-size: 55px;
+  }
+
+  .hero .content p{
+    font-size: 23px;
+    max-width: 600px;
+    margin: 20px 0 30px;
+  }
+
+  .hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Change the last value to adjust the darkness */
+  }
+
+  .hero *{ /* Everything in hero */
+    z-index: 10; /* Bring to front */
+  }
+
+
+
+
+
+
+
   
 
 

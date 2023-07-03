@@ -2,6 +2,10 @@
 :root {
   --primary-color: #28a745;
   --secondary-color: #0284d0;
+  --grey-utility-color: #333;
+  --light-grey-utility-color: #f4f4f4;
+  --white-utility-color: #fff;
+
 }
 
 .text-primary{
@@ -9,4 +13,33 @@
 }
 .text-secondary{
   color: var(--secondary-color)
+}
+
+.btn{
+  cursor: pointer;
+  display: inline-block ;
+  padding: 10px 30px;
+  color: var(--white-utility-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+.btn-primary{
+  color: var(--white-utility-color);
+  background-color: var(--primary-color);
+}
+.btn-secondary{
+  color: var(--white-utility-color);
+  background-color: var(--secondary-color);
+}
+.btn-dark{
+  color: var(--white-utility-color);
+  background-color: var(--grey-utility-color);
+}
+.btn-light{
+  color: var(--grey-utility-color);
+  background-color: var(--white-utility-color);
+}
+
+.btn:hover{
+  opacity: 0.9;
 }
