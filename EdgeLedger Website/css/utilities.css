@@ -40,6 +40,11 @@
   background-color: var(--white-utility-color);
 }
 
+.bg-light-grey{
+  background-color: var(--light-grey-utility-color);
+
+}
+
 .btn:hover{
   opacity: 0.9;
 }
@@ -110,3 +115,46 @@
 .flex-columns p{
   margin: 20px 0;
 }
+
+/* Business Case Section */
+.section-header {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+ .section-header h2,
+ .section-header p{
+  margin-top: 20px;
+}
+
+.section-header h2{
+  font-size: 40px;
+}
+
+.section-padding{
+  padding: 20px 20px 40px;
+}
+
+.flex-grid .row{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.flex-grid .column{
+  flex: 25%;
+  padding: 5px;
+}
+
+.fa-brands{
+  color: var(--white-utility-color);
+}
+
+
+
+
+
