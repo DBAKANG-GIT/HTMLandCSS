@@ -120,6 +120,7 @@ p{
 /* Enlarge heading */
 .l-heading{
     font-size: 40px;
+    line-height: 1.2;
 }
 
 /* Navbar */
@@ -131,7 +132,7 @@ p{
 }
 
 
-#navbar h1 {
+#navbar .logo {
     float: left;
     padding-top: 20px;
 }
@@ -183,7 +184,7 @@ p{
 
 /* Home Info */
 #home-info {
-    height: 400px;
+    height: 450px;
 }
 
 #home-info .info-img {
@@ -247,7 +248,7 @@ p{
 
 /* Testimonial Section */
 #about-testiominal{
-    height: 600px;
+    height: 100%;/*100% of the content in it */
     background: url(../img/test-bg.jpg) no-repeat center center/cover;
     padding-top: 100px ;
 }

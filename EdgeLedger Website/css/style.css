@@ -197,12 +197,16 @@ a{
   height: 200px   ;
 }
 
+footer a{
+  color: var(--white-utility-color);
+}
+
 .footer .social > *{
   margin-right: 30px;
 }
 
 .footer .social a:hover{
-  font-color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
 .footer p {
