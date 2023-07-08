@@ -55,8 +55,11 @@ a{
   position: fixed;
   top: 0px;
   padding: 0 30px;
+  transition: 0.5s;
 
  } 
+
+
 
  .navbar ul{
   display: flex;
@@ -75,6 +78,10 @@ a{
 
  .navbar .logo{
   font-weight: 400;
+ }
+
+ .navbar.top{
+  background: transparent;
  }
 
  /* Header/ Landing Page Image */
@@ -207,7 +214,7 @@ a{
     border-radius: 50%;
     width: 300px;
     display: block;
-    margin: 0 auto 30px
+    margin: 0 auto 30px  
 
   }
 

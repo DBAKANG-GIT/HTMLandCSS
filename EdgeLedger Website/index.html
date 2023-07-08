@@ -10,13 +10,15 @@
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link href="./node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
   <title>Welcome to EdgeLedger</title>
 </head>
 
 <body id="home">
   <header class="hero">
-    <div id="navbar" class="navbar">
+    <div id="navbar" class="navbar top">
       <!-- Logo -->
       <h1 class="logo">
         <span class="text-primary">
@@ -114,29 +116,49 @@
       <div class="row">
         <!-- First Column -->
         <div class="column">
-          <img src="./image_resources/cases/cases1.jpg" alt="">
-          <img src="./image_resources/cases/cases2.jpg" alt="">
+          <a href="./image_resources/cases/cases1.jpg" data-lightbox="case" data-title="Case 1">
+            <img src="./image_resources/cases/cases1.jpg" alt="">
+          </a>
+        
+          <a href="./image_resources/cases/cases2.jpg" data-lightbox="case" data-title="Case 2">
+            <img src="./image_resources/cases/cases2.jpg" alt="">
+          </a>
+        
         </div>
         <!-- Second Column -->
         <div class="column">
-          <img src="./image_resources/cases/cases3.jpg" alt="">
-          <img src="./image_resources/cases/cases4.jpg" alt="">
+          <a href="./image_resources/cases/cases3.jpg" data-lightbox="case" data-title="Case 3">
+            <img src="./image_resources/cases/cases3.jpg" alt="">
+          </a>
+        
+          <a href="./image_resources/cases/cases4.jpg" data-lightbox="case" data-title="Case 4">
+            <img src="./image_resources/cases/cases4.jpg" alt="">
+          </a>
+        
         </div>
         <!-- Third Column -->
         <div class="column">
-          <img src="./image_resources/cases/cases5.jpg" alt="">
-          <img src="./image_resources/cases/cases6.jpg" alt="">
-        </div>
-        <div class="column">
-          <img src="./image_resources/cases/cases7.jpg" alt="">
-          <img src="./image_resources/cases/cases8.jpg" alt="">
+          <a href="./image_resources/cases/cases5.jpg" data-lightbox="case" data-title="Case 5">
+            <img src="./image_resources/cases/cases5.jpg" alt="">
+          </a>
+        
+          <a href="./image_resources/cases/cases6.jpg" data-lightbox="case" data-title="Case 6">
+            <img src="./image_resources/cases/cases6.jpg" alt="">
+          </a>
+        
         </div>
         <!-- Fourth Column -->
         <div class="column">
-          <img src="./image_resources/cases/cases9.jpg" alt="">
-          <img src="./image_resources/cases/cases10.jpg" alt="">
+          <a href="./image_resources/cases/cases7.jpg" data-lightbox="case" data-title="Case 7">
+            <img src="./image_resources/cases/cases7.jpg" alt="">
+          </a>
+        
+          <a href="./image_resources/cases/cases8.jpg" data-lightbox="case" data-title="Case 8">
+            <img src="./image_resources/cases/cases8.jpg" alt="">
+          </a>
+        
         </div>
-      </div>
+        
     </section>
 
     <!-- Blog Post -->
@@ -210,18 +232,16 @@
             <h2>Request Callback</h2>
             <form class="callback-form">
               <label for="name"></label>
-              <input type="text" id="name"  name="name" placeholder="Enter name" ><br><br>
-              
+              <input type="text" id="name" name="name" placeholder="Enter name"><br><br>
+
               <label for="email"></label>
-              <input type="email" id="email" name="email"
-              placeholder="Enter email"><br><br>
-              
+              <input type="email" id="email" name="email" placeholder="Enter email"><br><br>
+
               <label for="phone"></label>
-              <input type="tel" id="phone" name="phone"
-              placeholder="Enter phone"><br><br>
-              
-              <input type="submit" value="Send"class="btn">
-              
+              <input type="tel" id="phone" name="phone" placeholder="Enter phone"><br><br>
+
+              <input type="submit" value="Send" class="btn">
+
             </form>
           </div>
         </div>
@@ -231,7 +251,7 @@
 
 
   </main>
-  
+
   <footer class="footer bg-dark">
     <div class="social">
       <a href="#"><i class="fa-brands fa-facebook fa-3x"></i></a>
@@ -241,8 +261,55 @@
     </div>
     <p>Copyright &copy 2023 - EdgeLedger</p>
 
-  
+
   </footer>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+  <script>
+    //Control the navbar transparency
+    const navbar = document.getElementById('navbar')
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 100) { //If we scroll than more than 100px
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)'; // Moves things along the Y axis
+        }
+        setTimeout(function () {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200)
+      }else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+
+    }
+
+    //Smooth Scrolling
+    $('#navbar a, .btn').on('click', function (e) {
+      if (this.hash !== '') {
+        e.preventDefault();
+        const hash = this.hash;
+
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top - 100
+          },
+          800
+        );
+      }
+    }
+    );
+
+
+
+  </script>
+
+<script src="./node_modules/lightbox2/dist/js/lightbox.js"></script>
+
 
 </body>
 
