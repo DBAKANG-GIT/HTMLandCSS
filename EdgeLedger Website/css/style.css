@@ -68,7 +68,8 @@ a{
   margin: 0 5px;
  }
 
- .navbar a:hover{
+ .navbar a:hover,
+ .navbar a.current{
   border-bottom:2px solid var(--primary-color)
  }
 
@@ -106,6 +107,16 @@ a{
     font-size: 23px;
     max-width: 600px;
     margin: 20px 0 30px;
+  }
+
+  .hero.blog{
+    background-image: url(../image_resources/home/blog.jpg);
+    background-repeat: no-repeat; /* the background image will not be repeated. */
+    background-position: center center; /* "/cover" means that the background image will be resized to cover the entire area of the element, without stretching or distorting the image. */
+    background-size: cover;
+    height: 30vh;
+
+
   }
 
   .hero::before{
@@ -186,6 +197,32 @@ a{
   margin-top: 20px;
 
  }
+
+   /* Post One Section */
+   .post{
+    padding: 50px 30px;
+    flex-direction: column;
+   }
+   .post img{
+    border-radius: 50%;
+    width: 300px;
+    display: block;
+    margin: 0 auto 30px
+
+  }
+
+  .post h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: #ccc solid 1px;
+  }
+
+  .post .meta{
+    margin-bottom: 30px;
+  }
+  
+
 
   /* Footer */
 .footer {
