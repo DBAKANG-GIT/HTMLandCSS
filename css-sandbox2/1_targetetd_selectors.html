@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Targeted Selectors</title>
+  <style>
+
+/*     
+    div p{ // Every Paragraph within a div
+      background-color: #ddd;
+    }
+    */
+
+    div > p{ /* Direct child */
+      background-color: red;
+    }
+
+    /* Directly after (Sibling) */
+    div + p{
+      background-color: #333;
+      color: #fff;
+    }
+
+    /* By attribute */
+    a[target ]{
+      background-color: red;
+      color: #fff;
+    }
+
+    /* By Type */
+    input[type= 'text'],
+    input[type = 'email']{
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div>
+    <p>Lorem ipsum dolor sit amet. para</p>
+    <ul>
+      <li>item 1</li>
+      <li><p>item 2 para</p></li>
+      <li>item 3</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet. para</p>
+
+  </div>
+  <p>Lorem ipsum dolor sit amet.para</p>
+  <a href="#">Page 1</a> 
+  <a href="#" target="_self">Page 2</a> 
+  <a href="http://google.com" target="_blank">Google</a>
+  <!-- _Blank makes it open up in a new tab -->
+
+  <br><br>
+
+  <form >
+    <input type="text" placeholder="Enter name">
+    <input type="email" placeholder="Enter email">
+    <input type="submit" value="Submit">
+  </form>
+
+  
+</body>
+</html>
