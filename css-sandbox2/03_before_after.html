@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before & After</title>
+
+  <style>
+    .is-required::after {
+      content: '*';
+      padding-left: 4px;
+      color: red;
+
+
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #333;
+      color: #fff;
+      margin: 0;
+    }
+
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header:before {
+      background: url(../html-sandbox/images/sample.jpg) no-repeat center center/cover;
+      content: '';
+      opacity: 0.4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    header>* {
+      position: relative;
+      z-index: 1;
+    }
+
+
+
+    header>h1 {
+      font-size: 4rem;
+      margin: 1rem;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- <label class="is-required" for="name">Name</label>
+  <input type="text"> -->
+
+  <header>
+    <h1>Hello World</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, qui!</p>
+
+
+  </header>
+  <section>
+    <h3>Lorem, ipsum dolor.</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam vel a molestiae soluta impedit magnam,
+      necessitatibus neque omnis alias velit error distinctio ut deleniti natus quisquam, atque ea inventore doloremque.
+    </p>
+
+  </section>
+
+  <script>
+    const header = document.querySelector('header');
+
+    fetch('https://api.unsplash.com/photos/random?client_id={PUT CLIENT ID}&query=dark,nature')
+      .then(response => response.json())
+      .then(data => {
+        header.style.backgroundSize = 'cover';
+        header.style.backgroundPosition = 'center center';
+        header.style.backgroundRepeat = 'no-repeat';
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  </script>
+
+</body>
+
+</html>
