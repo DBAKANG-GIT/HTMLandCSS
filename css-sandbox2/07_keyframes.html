@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframes</title>
+  <style>
+    body {
+      background-color: #333;
+    }
+
+    /* The animation code */
+    @keyframes animate1 {
+      from {
+        top:0;
+        background-color: red;
+      }
+ 
+      to {
+        top:300px;
+        background-color: yellow;
+        width: 600px;
+      }
+    }
+
+    /* The element to apply the animation to */
+    .box {
+      background: white;
+      width: 200px;
+      height: 200px;
+      animation-name: animate1;
+      animation-duration: 4s;
+      animation-iteration-count: 3;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+      position: relative;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+
+
+  </div>
+
+</body>
+
+</html>
