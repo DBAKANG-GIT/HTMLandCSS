@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing Unsplash API</title>
+  <style>
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Hello World</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, qui!</p>
+
+  </header>
+
+  <script>
+    const header = document.querySelector('header');
+
+    fetch('https://api.unsplash.com/photos/random?client_id=hlgeodArnWjeTum3ArgoNPE-e_mcAyIOJU5_AtnFerY&query=water&orientation=landscape&w=200&h=200')
+
+      .then(response => response.json())
+      .then(data => {
+        header.style.backgroundSize = 'cover';
+        header.style.backgroundPosition = 'center center';
+        header.style.backgroundRepeat = 'no-repeat';
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  </script>
+
+
+</body>
+
+
+
+</html>
