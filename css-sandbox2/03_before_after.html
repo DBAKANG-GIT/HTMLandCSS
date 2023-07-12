@@ -33,7 +33,7 @@
     }
 
     header:before {
-      background: url(../html-sandbox/images/sample.jpg) no-repeat center center/cover;
+      /* background: url(../html-sandbox/images/sample.jpg) no-repeat center center/cover; */
       content: '';
       opacity: 0.4;
       position: absolute;
@@ -80,9 +80,10 @@
   <script>
     const header = document.querySelector('header');
 
-    fetch('https://api.unsplash.com/photos/random?client_id={PUT CLIENT ID}&query=dark,nature')
+    fetch('https://api.unsplash.com/photos/random?client_id=hlgeodArnWjeTum3ArgoNPE-e_mcAyIOJU5_AtnFerY&query=dark,sun&orientation=landscape&count=3')
       .then(response => response.json())
       .then(data => {
+        header.style.backgroundImage = `url(${data.urls.full})`;
         header.style.backgroundSize = 'cover';
         header.style.backgroundPosition = 'center center';
         header.style.backgroundRepeat = 'no-repeat';
