@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Columns</title>
+  <style>
+    .grid {
+      display: grid;
+      /* grid-template-columns: 200px auto 200px;
+      grid-template-columns: repeat(4, auto); */
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: (3, 1fr);
+      grid-gap: 1rem;
+      }
+    .item {
+      padding: 3rem;
+      border: #333 1px solid;
+      text-align: center;
+      font-weight: bold;
+      background-color: #f4f4f4;
+
+    }
+    main{
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 2rem;
+
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+    <div class="item">Item 9</div>
+    <div class="item">Item 10</div>
+  </div>
+
+  <h1>Welcome to DailyMail</h1>
+  <main>
+    <section>
+      <h1>Harry and Meghan caught in another scandal</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat quo minima debitis. Nihil, praesentium atque nisi totam quae quo reprehenderit porro alias veniam cum nemo neque non minus iure quos.</p>
+    </section>
+    <aside>
+      <h3>Sport News: Oshimen signs!</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, unde atque veritatis ullam expedita pariatur libero? Rem exercitationem ab magni.</p>
+    </aside>
+  </main>
+
+
+
+</body>
+
+</html>
