@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Span</title>
+  <style>
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+
+
+       
+    }
+    .item {
+      padding: 3rem;
+      border: #333 1px solid;
+      text-align: center;
+      font-weight: bold;
+      background-color: #f4f4f4;
+
+    }
+    .grid div:first-child{
+      background-color: red;
+      /* grid-column-start: 1;
+      grid-column-end: 4; */
+      grid-row-start: 1;
+      grid-row-end: 4;
+
+      grid-column: 1 / span 1 ; /* Start at 1 and span 2 column lines*/
+      grid-row: 1 / span 5 ; /* Start at 1 and span 5 column lines*/
+    }
+
+    .grid div:last-child{
+      background-color: aqua;
+      grid-column: 2 / span 4;
+      
+
+    }
+
+    .grid div:nth-child(2){
+      background-color: aqua;
+      grid-column: 2 / span 4;
+    }
+
+    .grid div:nth-child(6){
+      background-color: red;
+      grid-column-start: 5;
+      grid-column-end: 5;
+      grid-row-start: 2;   
+      grid-row-end:6; 
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+    <div class="item">Item 9</div>
+    <div class="item">Item 10</div>
+  </div>
+</body>
+</html>

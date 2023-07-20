@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Media Queries</title>
+  <style>
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 1rem;
+
+    }
+    .item {
+      padding: 3rem;
+      border: #333 1px solid;
+      text-align: center;
+      font-weight: bold;
+      background-color: #f4f4f4;
+
+    }
+
+    @media(max-width: 768px){/*Tablets up to 768*/
+      .grid{
+        grid-template-columns: repeat(2,auto);
+    }
+
+    @media(max-width: 500px){/*Smartphones up to 500px*/
+      .grid{
+        grid-template-columns: repeat(1,1fr);
+
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor dolorem quae quis ducimus a? Sit vel vero, sint voluptatum suscipit perferendis eum dignissimos inventore ad! Enim laboriosam nemo ipsum dolore.</p>
+      
+    </div>
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor dolorem quae quis ducimus a? Sit vel vero, sint voluptatum suscipit perferendis eum dignissimos inventore ad! Enim laboriosam nemo ipsum dolore.</p>
+
+    </div>
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor dolorem quae quis ducimus a? Sit vel vero, sint voluptatum suscipit perferendis eum dignissimos inventore ad! Enim laboriosam nemo ipsum dolore.</p>
+
+    </div>
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor dolorem quae quis ducimus a? Sit vel vero, sint voluptatum suscipit perferendis eum dignissimos inventore ad! Enim laboriosam nemo ipsum dolore.</p>
+
+    </div>
+  </div>
+  
+</body>
+</html>
