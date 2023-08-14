@@ -33,7 +33,7 @@ header{
   &-a{//& means whatever the parent is and then-a
     background-color: $primary-color;
     color: $white-color;
-    border-bottom: 1px solid red;
+    // border-bottom: 1px solid red;
   }
   &-b{//& means whatever the parent is and then-a
     background-color: $secondary-color;
@@ -48,5 +48,28 @@ a{
   color: $dark-color;
   &:hover{
     color: coral;
+  }
+}
+
+%btn-shared{
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.btn{
+  &-light{
+    @extend %btn-shared;
+    background-color: $light-color;
+    color: $dark-color;
+  }
+
+  &-dark{
+    @extend %btn-shared;
+    background-color: $dark-color;
+    color: $light-color;
   }
 }
