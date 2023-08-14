@@ -1,7 +1,52 @@
-$color: green;
-$color: blue;
-$color: yellow;
+@import 'variables';
+// Reset
+*{
+  padding: 0;
+  margin: 0;
+}
 
 body{
-  background-color: $color;
+  background-color: $green-color;
+  color: $light-color;
+  font-family: $font-stack  ;
+}
+
+header{
+  background-color: $dark-color;
+  color: $light-color;
+  padding: 1rem;
+
+  h1{
+    text-align: center;
+  }
+
+}
+
+.section{
+  padding: 3rem;
+
+  h3{
+    font-size: 2rem;
+  }
+
+  // Nesting
+  &-a{//& means whatever the parent is and then-a
+    background-color: $primary-color;
+    color: $white-color;
+    border-bottom: 1px solid red;
+  }
+  &-b{//& means whatever the parent is and then-a
+    background-color: $secondary-color;
+    color: $white-color;
+  }
+
+}
+
+// Pseudo Nesting
+
+a{
+  color: $dark-color;
+  &:hover{
+    color: coral;
+  }
 }
