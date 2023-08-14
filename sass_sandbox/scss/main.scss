@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'functions';
+@import 'mixins';
 // Reset
 *{
   padding: 0;
@@ -12,8 +14,8 @@ body{
 }
 
 header{
-  background-color: $dark-color;
-  color: $light-color;
+  background-color: $secondary-color;
+  color: set-text-color($secondary-color);
   padding: 1rem;
 
   h1{
@@ -26,18 +28,19 @@ header{
   padding: 3rem;
 
   h3{
-    font-size: 2rem;
+    @include font(4rem, normal);
   }
 
   // Nesting
   &-a{//& means whatever the parent is and then-a
     background-color: $primary-color;
-    color: $white-color;
+    color: set-text-color($primary-color);
     // border-bottom: 1px solid red;
   }
   &-b{//& means whatever the parent is and then-a
     background-color: $secondary-color;
-    color: $white-color;
+    color: set-text-color($secondary-color);
+    
   }
 
 }
@@ -64,12 +67,21 @@ a{
   &-light{
     @extend %btn-shared;
     background-color: $light-color;
-    color: $dark-color;
+    color: set-text-color($light-color);
+
+    &:hover{
+      @include transform (rotate(-20deg));
+    }
   }
 
   &-dark{
     @extend %btn-shared;
     background-color: $dark-color;
-    color: $light-color;
+    color: set-text-color($dark-color);
+
+
+    &:hover{
+      @include transform (rotate(20deg));
+    }
   }
 }

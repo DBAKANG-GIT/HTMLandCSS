@@ -1,0 +1,13 @@
+// Transform Mixin
+
+@mixin transform($property){
+  --webkit-transform: $property; //For older browsers
+  -ms-transform: $property;  //For older browsers
+  transform: $property;
+}
+
+/* Define a mixin to set font properties */
+@mixin font($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
